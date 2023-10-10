@@ -1,0 +1,16 @@
+<div class="d-flex justify-content-around">
+	<div>
+		Add New Todo
+	</div>
+	<div>
+		<button (click)="navigateToTodo()">New Todo</button>
+	</div>
+
+</div>
+<div class="mt-3">
+	<div *ngIf="todoList.length !== 0">
+		<app-todo [todo]="todoList"(newTodoEvent)="updateList($event)"></app-todo>
+	</div>
+</div>
+
+

@@ -1,0 +1,15 @@
+<form [formGroup]="todoFrom" class="border border-light p-5" (ngSubmit)="submit()">
+	<div class="mb-3">
+	  <label for="title" class="form-label">Title</label>
+	  <input type="text" class="form-control" id="title" formControlName="title" >
+
+	</div>
+	<div class="mb-3">
+	  <label for="description" class="form-label">Description</label>
+	  <textarea type="text" class="form-control" id="description" formControlName="description">
+		</textarea>
+	</div>
+
+	<button type="submit" class="btn btn-primary float-end">{{isEdit? 'Save':'Submit'}}</button>
+	<button type="" class="btn btn-primary" (click)="OnCancel()">Cancel</button>
+  </form>
